@@ -40,7 +40,7 @@ RSpec.describe Pronto::Undercover do
         expect(msg).to be_a(Pronto::Message)
         expect(msg.line).to be_a(Pronto::Git::Line)
         expect(msg.msg).to eq(
-          'instance method foo missing tests for line 10 (coverage: 0.5)'
+          'instance method foo missing tests for line 10 (coverage: 50.00%)'
         )
         expect(msg.level).to eq(:warning)
         expect(msg.line.new_lineno).to eq(10)
@@ -83,7 +83,7 @@ RSpec.describe Pronto::Undercover do
         expect(msg).to be_a(Pronto::Message)
         expect(msg.line).to be_a(Pronto::Git::Line)
         expect(msg.msg).to eq(
-          'instance method foo_child missing tests for line 15 (coverage: 0.0)'
+          'instance method foo_child missing tests for line 15 (coverage: 0.00%)'
         )
         expect(msg.level).to eq(:warning)
         expect(msg.line.new_lineno).to eq(15)

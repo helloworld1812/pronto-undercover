@@ -22,7 +22,7 @@ module Pronto
     # @return Array[Pronto::Message]
     def run
       return [] if !@patches || @patches.count.zero?
-      
+
       @patches
         .select { |patch| valid_patch?(patch) }
         .map { |patch| patch_to_undercover_message(patch) }
@@ -46,6 +46,7 @@ module Pronto
           .select { |line| line.new_lineno == msg_line_no }
           .map do |line|
             next if warning.coverage_f >= @minimum_coverage
+
             lines = untested_lines_for(warning)
             path = line.patch.delta.new_file[:path]
             msg = "#{warning.node.human_name} #{warning.node.name} missing tests " \

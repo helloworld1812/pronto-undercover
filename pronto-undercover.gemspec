@@ -22,13 +22,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'pronto', '>= 0.9', '< 0.12'
   spec.add_dependency 'undercover', '~> 0.4.3'
-  spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'simplecov'
-  spec.add_development_dependency 'simplecov-html'
-  spec.add_development_dependency 'simplecov-lcov'
-  spec.add_development_dependency 'timecop'
   spec.metadata['rubygems_mfa_required'] = 'true'
 end
