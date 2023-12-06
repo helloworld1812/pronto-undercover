@@ -1,0 +1,23 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  NewCops: enable
+
+Style/RegexpLiteral:
+  EnforcedStyle: slashes
+  AllowInnerSlashes: true
+
+Style/Documentation:
+  Enabled: false
+
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+  EnforcedStyle: no_space
+
+Layout/LineLength:
+  Enabled: True
+  Max: 100
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*
